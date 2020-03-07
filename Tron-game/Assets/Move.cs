@@ -63,23 +63,27 @@ public class Move : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(upKey)) {
-            GetComponent<Rigidbody2D>().velocity = Vector2.up * speed;
-            spawnWall();
+            if (GetComponent<Rigidbody2D>().velocity != -Vector2.up * speed)
+                GetComponent<Rigidbody2D>().velocity = Vector2.up * speed;
+                spawnWall();
         }
 
         else if (Input.GetKeyDown(downKey)) {
-            GetComponent<Rigidbody2D>().velocity = -Vector2.up * speed;
-            spawnWall();
+            if (GetComponent<Rigidbody2D>().velocity != Vector2.up * speed)
+                GetComponent<Rigidbody2D>().velocity = -Vector2.up * speed;
+                spawnWall();
         }
 
         else if (Input.GetKeyDown(rightKey)) {
-            GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
-            spawnWall();
+            if (GetComponent<Rigidbody2D>().velocity != -Vector2.right * speed)
+                GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
+                spawnWall();
         }
 
         else if (Input.GetKeyDown(leftKey)) {
-            GetComponent<Rigidbody2D>().velocity = -Vector2.right * speed;
-            spawnWall();
+            if (GetComponent<Rigidbody2D>().velocity != Vector2.right * speed)
+                GetComponent<Rigidbody2D>().velocity = -Vector2.right * speed;
+                spawnWall();
         }
 
         fitColliderBetween(wall, lastWallEnd, transform.position);
