@@ -53,7 +53,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Moive.cs" />
      <Compile Include="Assets\Move.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/my_pc/Code/Tron-game/Tron-game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
